@@ -1,25 +1,12 @@
 var express = require('express');
 var app = express();
+var routes = require('./routes');
 
 app.set('view engine','ejs')
 
-// default.ejs is the default view -- which is within /views/partials/
-// to change it, you can re-write the default or create your own
-app.get('/', function(req, res){
-  res.render('default', { 
-  	title : 'HOME',
-  	classname : 'home',
-  	users : ['A','B','C'] //Passing data
-  	 });
-});
+app.get('/', routes.index);
 
-app.get('/about', function(req, res){
-	res.render('default', {
-		title : 'ABOUT US',
-		classname : 'about'
-		// users : ['D','E','F']
-	});
-});
+app.get('/about', routes.about);
 
 app.get('*', function(req, res){
 	res.render('404', {
