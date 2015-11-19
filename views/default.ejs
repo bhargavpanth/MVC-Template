@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> <% include partials/page/head.ejs %> </head>
+  <body>
+	<div class="container">
+		<h1><%= title %></h1>	
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam aspernatur numquam
+		 porro, maiores consectetur ab quisquam suscipit vero, assumenda accusantium necessitatibus
+		 quo nesciunt obcaecati, sunt. Dolor ipsum, quos quia eum?</p>
+		
+		<ul>
+		<% for(var i=0; i<users.length; i++) { %>
+			<li> <%= users[i] %> </li>
+		<% } %>
+		</ul>
+
+	<% include partials/page/jsdefaults.ejs %>
+	</div> <!-- end of container -->
+</body>
+</html>
