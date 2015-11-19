@@ -16,8 +16,8 @@ app.get('/', function(req, res){
 app.get('/about', function(req, res){
 	res.render('default', {
 		title : 'ABOUT US',
-		classname : 'about',
-		users : ['D','E','F']
+		classname : 'about'
+		// users : ['D','E','F']
 	});
 });
 

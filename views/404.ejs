@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head> <% include partials/page/head.ejs %> </head>
-  <body>
+  <body class="<% classname %>">
 	<div class="container">
 		<div class="jumbotron">
 			<h1 class="text-center"> 404 </h1> <br>
 			<h4 class="text-center"> Looks like the page that you are looking for is not found </h4>
 		</div>
+
+		<% if(typeof(users) !== 'undefined') {%>
+			<ul>
+			<% for(var i=0; i<users.length; i++) { %>
+				<li> <%= users[i] %> </li>
+			<% } %>
+			</ul>
+		<% } %>
+
+
 	<% include partials/page/jsdefaults.ejs %>
 	</div> <!-- end of container -->
 </body>
