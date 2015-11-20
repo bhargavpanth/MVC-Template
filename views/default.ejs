@@ -4,18 +4,28 @@
   <body class="<% classname %>">
 	<div class="container">
 		<h1><%= title %></h1>	
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam aspernatur numquam
-		 porro, maiores consectetur ab quisquam suscipit vero, assumenda accusantium necessitatibus
-		 quo nesciunt obcaecati, sunt. Dolor ipsum, quos quia eum?</p>
 		
-		<% if(typeof(users) !== 'undefined') {%>
-			<ul>
-			<% for(var i=0; i<users.length; i++) { %>
-				<li> <%= users[i] %> </li>
-			<% } %>
-			</ul>
+		<% if(typeof(paragraph) !== 'undefined') {%>
+		<p> <%= paragraph %> </p>
 		<% } %>
 
+		<% if(typeof(question) !== 'undefined') {%>
+		<p>
+			<%= question %>
+		</p>
+		<% } %>
+		
+		<% if(typeof(option) !== 'undefined') {%>
+			<% for(var i=0; i<option.length; i++) { %>
+				<div class="radio">
+				  <label>
+				    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+					<%= option[i] %>
+				  </label>
+				</div>
+			<% } %>
+			<button type="button" class="btn btn-primary">GO!</button>
+		<% } %>
 
 	<% include partials/page/jsdefaults.ejs %>
 	</div> <!-- end of container -->

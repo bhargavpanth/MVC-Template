@@ -2,11 +2,14 @@ var express = require('express');
 var app = express();
 var routes = require('./routes');
 
+//Database - MongoDB
+//var MongoClient = require('mongodb').MongoClient;
+
 app.set('view engine','ejs')
 
 app.get('/', routes.index);
 
-app.get('/about', routes.about);
+app.get('/start', routes.start);
 
 app.get('*', function(req, res){
 	res.render('404', {

@@ -4,14 +4,15 @@ exports.index = function(req, res){
   res.render('default', { 
   	title : 'HOME',
   	classname : 'home',
-  	users : ['A','B','C'] //Passing data
+  	paragraph: 'Go to /start to get started with the MCQ'
   	 });
 }
 
-exports.about = function(req, res){
+exports.start = function(req, res){
 	res.render('default', {
-		title : 'ABOUT US',
-		classname : 'about'
-		// users : ['D','E','F']
+		title : 'START',
+		classname : 'start',
+		question : 'What is 1 + 1 ?',
+		option: ['1','2','3','4']
 	});
 }
