@@ -1,3 +1,6 @@
 # MVC-Template
 
-Multiple Choice Questions in Node with Express
+> A simple MVC framework built on top of Express.js
+
+
+
